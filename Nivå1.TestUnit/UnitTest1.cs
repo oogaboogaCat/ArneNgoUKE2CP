@@ -16,6 +16,7 @@ namespace Nivå1.TestUnit
 
             Assert.That(actual.ToString(), Is.EqualTo(expected));
         }
+
         [TestCase("Tomas",200,"#200,Tomas")]
         [TestCase("Agustina", 100,"#100,Agustina")]
         [TestCase("Reza", 420, "#420,Reza")]
@@ -25,6 +26,19 @@ namespace Nivå1.TestUnit
             Player actual = new(name, number);
 
             Assert.That(actual.ToString(), Is.EqualTo(expected));
+        }
+        [TestCase("Arne",25,"#26,Arne")]
+        public void OperatorOverloadTest(string name, int number, string expectedNumber) 
+        {
+            List<Team> testlist = new()
+            {
+                new Player(name, number),
+             };
+            testlist[0]++;
+
+            Assert.That(testlist[0].ToString(), Is.EqualTo(expectedNumber));
+
+
         }
 
     }
