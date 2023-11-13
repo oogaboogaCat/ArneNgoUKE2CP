@@ -13,6 +13,9 @@ namespace ArneNgoNivå1
         {
             Description = descprption;
         }
-
+        public override string ToString()
+        {
+            return $"{base.ToString()}, A Star Player! Description: {Description}";
+        }
     }
 }

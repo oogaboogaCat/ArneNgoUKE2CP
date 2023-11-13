@@ -7,15 +7,27 @@ using System.Threading.Tasks;
 namespace ArneNgoNivå1
 {
     public abstract class Team
-    { 
-        public abstract string Name { get; set; }
-        List<int> teams = new(); 
+    {
+        string Name { get; set; }
+        int Players {  get; set; }
+        public static List<Team> teams = new(); 
 
-        public Team(string name, int Player)
+        public Team(string name, int players)
         {
             Name = name;
-            teams.Add(Player);
-            
+            Players = players;
+            teams.Add(this);
+        }
+        public override string ToString()
+        {
+            return $"#{Players},{Name}";
+        }
+        public static void PrintTeam() 
+        {
+            Console.WriteLine("Team OoogaBooga!\n-----------------");
+            List<Team> CopyTeams = teams;
+            foreach (var team in CopyTeams) { Console.WriteLine(team); }
+        
         }
     }
 }

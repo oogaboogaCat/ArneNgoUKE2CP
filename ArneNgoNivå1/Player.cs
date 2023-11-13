@@ -8,8 +8,13 @@ namespace ArneNgoNivå1
 {
     public class Player : Team
     {
+
         public Player(string name, int number) : base(name, number)
         {
+        }
+        public override string ToString()
+        {
+            return $"{base.ToString()}";
         }
     }
 }
