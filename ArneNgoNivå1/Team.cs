@@ -8,13 +8,30 @@ namespace ArneNgoNivå1
 {
     public abstract class Team
     {
-        string Name { get; set; }
-        int Players {  get; set; }
+        private string _name;
+        private int _players;
+        string Name
+        {
+            get { return _name; }
+            set { 
+                if (string.IsNullOrEmpty(value)) 
+                { throw new ArgumentNullException(null, "Cannot set name to null"); }
+                else { _name = value; }
+            }
+        }
+        int Players
+        {
+            get { return _players; }
+            set { if (value < 0) 
+                { throw new ArgumentNullException(null, "Player needs to have a positive number"); }
+                else { _players = value; }
+            }
+        }
         public static List<Team> teams = new(); 
 
-        public Team(string name, int players)
+        public Team(string? name, int players)
         {
-            Name = name;
+            _name = name?? "";
             Players = players;
             teams.Add(this);
         }
