@@ -18,21 +18,20 @@
                 Team.PrintTeam();
 
                 Team.teams[2]++;
-
                 Console.WriteLine(Team.teams[2]);
+                Team.teams[2]--;
+                Console.WriteLine(Team.teams[2]);
+
 
                 bool checker = Team.teams[0] == Team.teams[1];
                 bool checker1 = Team.teams[0] != Team.teams[1];
 
-
                 Console.WriteLine(checker);
                 Console.WriteLine(checker1);
-
-
             }
             catch (Exception e) 
             {
-                Console.WriteLine("hehehe" + e.Message);
+                Console.WriteLine("Nivå2 never fails from me" + e.Message);
             }
 
 

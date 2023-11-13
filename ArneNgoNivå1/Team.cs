@@ -50,6 +50,15 @@ namespace ArneNgoNivå1
         {
             return player1.NumberUpgrade();
         }
+        public Team NumberDegrade()
+        {
+            Players -= 1;
+            return this;
+        }
+        public static Team operator --(Team player1)
+        {
+            return player1.NumberDegrade();
+        }
         public static bool operator ==(Team p1,Team p2) 
         {
             return Team.Equals(p1,p2);
@@ -59,6 +68,7 @@ namespace ArneNgoNivå1
             if (Team.Equals(p1, p2)) { return false; }
             else { return true; }
         }
+
 
     }
 }
