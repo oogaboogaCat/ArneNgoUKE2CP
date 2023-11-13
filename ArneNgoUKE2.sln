@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArneNgoNivå1", "ArneNgoNivå1\ArneNgoNivå1.csproj", "{5E916EF6-A003-451C-BFCE-013D5D4D1064}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nivå1.TestUnit", "Nivå1.TestUnit\Nivå1.TestUnit.csproj", "{7B805FC0-DAC0-47C0-B2D4-4DCA0FBB9566}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5E916EF6-A003-451C-BFCE-013D5D4D1064}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E916EF6-A003-451C-BFCE-013D5D4D1064}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E916EF6-A003-451C-BFCE-013D5D4D1064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B805FC0-DAC0-47C0-B2D4-4DCA0FBB9566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B805FC0-DAC0-47C0-B2D4-4DCA0FBB9566}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B805FC0-DAC0-47C0-B2D4-4DCA0FBB9566}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B805FC0-DAC0-47C0-B2D4-4DCA0FBB9566}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
