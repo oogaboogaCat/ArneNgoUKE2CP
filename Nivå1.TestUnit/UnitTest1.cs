@@ -25,7 +25,6 @@ namespace Nivå1.TestUnit
             Player actual = new(name, number);
 
             Assert.That(actual.ToString(), Is.EqualTo(expected));
-        
         }
 
     }

@@ -29,5 +29,36 @@ namespace ArneNgoNivå1
             foreach (var team in CopyTeams) { Console.WriteLine(team); }
         
         }
+        public static bool Equals(Team player1, Team player2) 
+        {
+            if (player1.ToString() == player2.ToString())
+            { return true; }
+            else { return false; }
+        }
+        public override bool Equals(object? obj) 
+        {
+            if(obj is Team other) 
+            { return Team.Equals(this, other); }
+            else { return false; }
+        }
+        public Team NumberUpgrade() 
+        {
+            Players += 1;
+            return this;
+        }
+        public static Team operator ++(Team player1)
+        {
+            return player1.NumberUpgrade();
+        }
+        public static bool operator ==(Team p1,Team p2) 
+        {
+            return Team.Equals(p1,p2);
+        }
+        public static bool operator !=(Team p1, Team p2) 
+        {
+            if (Team.Equals(p1, p2)) { return false; }
+            else { return true; }
+        }
+
     }
 }
